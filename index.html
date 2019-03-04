@@ -25,79 +25,41 @@
         <div class="form-group">
           <label for="exampleFormControlSelect1">Select a Pizza</label>
           <select class="form-control" id="exampleFormControlSelect1">
-            <option>Cheese</option>
-            <option>Pepperoni</option>
-            <option>Sausage</option>
-            <option>The Meats</option>
-            <option>BBQ Chicken & Bacon</option>
+            <option value = "cheese">Cheese</option>
+            <option value = "pep">Pepperoni</option>
+            <option value = "sausage">Sausage</option>
+            <option value = "meat">The Meats</option>
+            <option value = "bacon">BBQ Chicken & Bacon</option>
           </select>
         </div>
         <div class="form-group">
           <label for="exampleFormControlSelect2">Select Number of Pizzas</label>
           <select class="form-control" id="exampleFormControlSelect2">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
+            <option value = "1">1</option>
+            <option value = "2">2</option>
+            <option value = "3">3</option>
+            <option value = "4">4</option>
+            <option value = "5">5</option>
           </select>
         </div>
         <div class="form-group">
           <label for="exampleFormControlTextarea1">Example textarea</label>
           <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
-        <div>
-          <button id="submitBtn" type="button" class="btn btn-outline-info">Submit</button>
- 
-          
-          <div id="myModal" class="modal">
+        <button type="button" id = "btn" class="btn btn-light" action="">Submit</button>
 
-            <!-- Modal content -->
-            <div class="modal-content">
-              <span class="close">&times;</span>
-              <p>Some text in the Modal..</p>
-            </div>
-          
-          </div>
-          
-          <script>
-            var modal = document.getElementById('myModal');
-            var btn = document.getElementById("submitBtn");
-            var span = document.getElementsByClassName("close")[0];
-            btn.onclick = function() 
-            {
-              modal.style.display = "block";
-            }
-            span.onclick = function()
-            {
-              modal.style.display = "none";
-            }
-            window.onclick = function(event) 
-            {
-              if (event.target == modal) {
-              modal.style.display = "none";
-              }
-            }
-
-          
-            $(document).ready(function() {
-            $('#submit').click(function () {
-            /* when the button in the form, display the entered values in the modal */
-            $('#name').html($('#userName').val());
-            $('#dat').html($('#date').val());
-            $('#pdat').html($('#pdate').val());
-            $('#remark').html($('#remarks').val());
-            });
-
-            $('#submit').click(function () {
-            /* when the submit button in the modal is clicked, submit the form */
-            alert('submitting');
-            $('#ps_entry').submit();
-            });
-            });
-          </script>
-        </div>
       </form>
+
+<script>
+
+    function pizzaArray(){
+        pizza = document.getElementById(`btn`).addEventListener("click", function(){
+            document.getElementById(`exampleFormControlSelect1`)
+        });
+    }
+    pizzaArray();
+</script>
+              
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
