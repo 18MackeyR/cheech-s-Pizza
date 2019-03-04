@@ -14,7 +14,7 @@
     <form>
         <div class="form-group">
           <label for="exampleFormControlInput1">Name</label>
-          <input type="email" class="form-control" id="name" placeholder="First Last">
+          <input id = "userName" type="email" class="form-control" id="name" placeholder="First Last">
         </div>
         <div class="form-group">
           <label for="exampleFormControlInput1">Email</label>
@@ -43,6 +43,57 @@
         <div class="form-group">
           <label for="exampleFormControlTextarea1">Example textarea</label>
           <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <div>
+          <button id="submitBtn" type="button" class="btn btn-outline-info">Submit</button>
+ 
+          
+          <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>Some text in the Modal..</p>
+            </div>
+          
+          </div>
+          
+          <script>
+            var modal = document.getElementById('myModal');
+            var btn = document.getElementById("submitBtn");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function() 
+            {
+              modal.style.display = "block";
+            }
+            span.onclick = function()
+            {
+              modal.style.display = "none";
+            }
+            window.onclick = function(event) 
+            {
+              if (event.target == modal) {
+              modal.style.display = "none";
+              }
+            }
+
+          
+            $(document).ready(function() {
+            $('#submit').click(function () {
+            /* when the button in the form, display the entered values in the modal */
+            $('#name').html($('#userName').val());
+            $('#dat').html($('#date').val());
+            $('#pdat').html($('#pdate').val());
+            $('#remark').html($('#remarks').val());
+            });
+
+            $('#submit').click(function () {
+            /* when the submit button in the modal is clicked, submit the form */
+            alert('submitting');
+            $('#ps_entry').submit();
+            });
+            });
+          </script>
         </div>
       </form>
 
