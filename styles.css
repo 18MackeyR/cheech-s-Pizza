@@ -1,7 +1,15 @@
-form{
+body{
+    margin: 0;
+    padding: 0;
+}
+form.full{
     width: 30%;
-    margin-left: 33%;
-    margin-top: 20%;
-    border-color: black;
-    border-width: 10px;
+    margin-left: 200px;
+    margin-top: 75px;
+    background-color: rgba(168, 83, 13, 0.486);
+    padding: 20px;
+    min-width: 400px;
+}
+.title{
+text-align: center;
 }
